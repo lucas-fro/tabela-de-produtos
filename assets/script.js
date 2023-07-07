@@ -5,8 +5,8 @@ var inputProduto = document.getElementById('produto');
 var inputValor = document.getElementById('valor');
 
 
-inputValor.addEventListener("keydown", function(event) {
-    if (event.keyCode === 13) {
+inputValor.addEventListener("keydown", function(tecla) {
+    if (tecla.keyCode === 13) {
         adicionarProduto();
     }
 });
