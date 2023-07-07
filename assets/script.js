@@ -1,14 +1,21 @@
 var tbody = document.getElementById('tbody');
 var id = 1;
 
-function adicionarProduto(){
+var inputProduto = document.getElementById('produto');
+var inputValor = document.getElementById('valor');
 
-    var inputProduto = document.getElementById('produto');
-    var inputValor = document.getElementById('valor');
+
+inputValor.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        adicionarProduto();
+    }
+});
+
+function adicionarProduto() {
     var produto = inputProduto.value;
     var valor = Number(parseFloat(inputValor.value)).toFixed(2);
 
-    if(produto !== '' && valor !== ''){
+    if (produto !== '' && valor !== '') {
         var newRow = tbody.insertRow();
         newRow.id = 'Row' + id;
 
@@ -42,12 +49,11 @@ function adicionarProduto(){
 
         acoes.appendChild(btnExcluir);
 
-
         inputProduto.value = '';
         inputValor.value = '';
         id++;
-    }else{
-        alert('prencha todos os campos');
+    } else {
+        alert('Preencha todos os campos');
     }
 }
 
