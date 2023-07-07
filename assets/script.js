@@ -65,7 +65,7 @@ function editarRow(rowId){
     const valorCell = row.cells[2];
 
     let produto = prompt('Digite o novo nome do produto:', produtoCell.innerHTML);
-    let valor = parseFloat(prompt('Digite o novo valor do produto:', valorCell.innerHTML.replace('R$ ', ''))).toFixed(2);
+    let valor = parseFloat(prompt('Digite o novo valor do produto:', valorCell.innerHTML)).toFixed(2);
 
     if (produto !== null) {
         if (valor !== null && !isNaN(valor)) {
