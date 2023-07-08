@@ -34,7 +34,7 @@ function adicionarProduto() {
         let btnEditar = document.createElement('button');
         btnEditar.className = 'btnAcoes btnEditar'
         btnEditar.innerHTML = '<img src="imagens/pencil-square.svg"/>'
-        btnEditar.onclick = function(){
+        btnEditar.onclick = () => {
             editarRow(newRow.id);
         };
 
@@ -43,7 +43,7 @@ function adicionarProduto() {
         let btnExcluir = document.createElement('button');
         btnExcluir.className = 'btnAcoes btnExcluir'
         btnExcluir.innerHTML = '<img src="imagens/trash.svg"/>';
-        btnExcluir.onclick = function(){
+        btnExcluir.onclick = () => {
             excluirRow(newRow.id);
         };
 
